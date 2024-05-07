@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cas 4</title>
+
+    <style>
+        ul{
+            border: 1px solid black;
+        }
+
+        ul li{
+            /* list-style-type: square; */
+            list-style-image: url();
+            background-color: aqua;
+            list-style-position: inside;
+        }
+
+        ol li{
+            list-style-type: lower-alpha;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Liste</h1>
+
+    <h2>Nenumersiane liste</h2>
+
+    <p>Meni franscuskog restorana:</p>
+    <ul>
+      <li>French toast</li>
+      <li>Oeufs Benedicts</li>
+      <li>French Crepes</li>
+    </ul>
+
+    <h2>Numerisane liste</h2>
+    <p>HTML:</p>
+    <ol>
+      <li>Liste</li>
+      <li>Tabele</li>
+      <li>Vezama</li>
+    </ol>
+
+    <p>CSS:</p>
+    <ol start="4">
+      <li>Liste</li>
+      <li>Tabele</li>
+      <li>Vezama</li>
+      <li>Pseudoklase</li>
+      <li>Pseudoelemente</li>
+    </ol>
+
+    <h2>Opisne liste</h2>
+    <p>Omiljene stvari po temama</p>
+    <dl>
+      <dt>Omiljeno pice</dt>
+      <!--data term(pojam stavka)-->
+      <dd>Caj</dd>
+      <!--data description(definicija, opis)-->
+      <dt>Omiljena hrana</dt>
+      <dd>Sushi</dd>
+      <dt>Omiljena knjiiga</dt>
+      <dd>Elantris/Faust</dd>
+    </dl>
+
+    <h2>Ugnjezdene liste</h2>
+
+    <p>Nasumicna lista</p>
+    <ul>
+        <li>Stavka 1</li>
+        <li>Stavka 2</li>
+        <li>
+            Stavka 3
+            <ul>
+                <li>Stavka 3.1</li>
+                <li>Stavka 3.2</li>
+                <li>Stavka 3.3</li>
+
+            </ul>
+        </li>
+        <li>
+            Stavka 4
+            <ol>
+                <li>Stavka</li>
+                <li>Stavka</li>
+                <li>Stavka</li>
+
+            </ol>
+        </li>
+    </ul>
+  </body>
+</html>

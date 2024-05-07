@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cas 05</title>
+        <meta charset="UTF-8">
+
+        <style></style>
+    </head>
+    <body>
+        <script>
+            const prvaRec = 'Ovo';
+            const drugaRec = 'je';
+            const trecaRec = 'recenica';
+
+            const celaRecenica = prvaRec + " " + drugaRec + " " + trecaRec;
+            console.log(celaRecenica);
+
+            const brojKaraktera = celaRecenica.length;
+            console.log(brojKaraktera);
+
+            let pozicija = celaRecenica.indexOf('recenica');
+            console.log(pozicija);
+            pozicija = celaRecenica.indexOf('nepostojeca niska');
+            console.log(pozicija);
+
+            const podniska = celaRecenica.slice(7, celaRecenica.length);
+            console.log(podniska);
+
+            const izmenjenaRecenica = celaRecenica.replace('recenica', 'nesto duza recenica');
+            console.log(izmenjenaRecenica);
+
+            const svaVelika = celaRecenica.toUpperCase();
+            console.log(svaVelika);
+            const svaMala = celaRecenica.toLowerCase();
+            console.log(svaMala);
+
+            const recenicaSaBelinama = "        \n\n    \t" + celaRecenica + "   \t\t\n";
+            console.log(recenicaSaBelinama);
+            const osisanaRecenica = recenicaSaBelinama.trim();
+            console.log(osisanaRecenica);
+
+            const prviKarakter = celaRecenica.charAt(0);
+            const poslednjiKarakter = celaRecenica.charAt(celaRecenica.length - 1);
+            console.log(prviKarakter);
+            console.log(poslednjiKarakter);
+
+            function najvecaVrednost(x,y){
+                const result = x > y ? x : y;
+                return result;
+            }
+            const maksimum = najvecaVrednost(-1, 1);
+            console.log(maksimum);
+        </script>
+    </body>
+</html>

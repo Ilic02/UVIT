@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vezbe 3</title>
+    <meta charset="UTF-8" />
+
+    <style></style>
+  </head>
+  <body>
+    <!--
+            file:///C:/Users/nikol/OneDrive/Desktop/UVIT/Cas03/index.html
+            ?
+            ime=Nikola
+            &
+            prezime=Ilic
+            &
+            email=nikola.ni959%40gmail.com
+            &
+            lozinka=1234
+            &
+            smer=inf
+            &
+            zgrada=trg
+            &
+            zgrada=svn
+        -->
+
+    <h1>Formulari</h1>
+    <hr />
+    <form method="POST">
+      <fieldset>
+        <legend>Osnovni podaci</legend>
+        <label for="imeId">Ime:</label>
+        <input type="text" name="ime" id="imeId" />
+
+        <br />
+
+        <label for="prezimeId">Prezime:</label>
+        <input type="text" name="prezime" id="prezimeId" />
+
+        <br />
+
+        Email:
+        <input type="email" name="email" />
+
+        <br />
+
+        Lozinka:
+        <input type="password" name="lozinka" />
+
+        <br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Podaci o studijama</legend>
+        Datum upisa:
+        <input type="date" name="datum" />
+
+        <br />
+
+        Smer:
+        <br />
+        <input type="radio" name="smer" value="mat" /> Matematika <br />
+        <input type="radio" name="smer" value="inf" checked /> Informatika
+        <br />
+        <input type="radio" name="smer" value="ast" /> Astronomija i
+        Astrofizika<br />
+
+        Zgrada u kojoj slusate predavanja: <br />
+        <input type="checkbox" name="zgrada" value="trg" checked /> Studentsku
+        trg
+        <br />
+        <input type="checkbox" name="zgrada" value="jag" /> Jagiceva <br />
+        <input type="checkbox" name="zgrada" value="svn" /> Svetog Nikole <br />
+
+        <br />
+        Smer 2: <br />
+        <select name="smer-2" multiple>
+          <option value="mat">Matematika</option>
+          <option value="inf">Informatika</option>
+          <option value="ast">Astronomija i Astrofizika</option>
+        </select>
+
+        <br />
+
+        Utisci: <br />
+        <textarea name="ustisak" id="" cols="30" rows="10"></textarea>
+        <br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Dodatne informacije</legend>
+        Omiljeni veb pregldac:
+        <br />
+        <input list="pregldeaciId" name="omiljeni-veb-pregledac" />
+        <datalist id="pregldeaciId">
+          <option value="Microsoft Edge"></option>
+          <option value="Firefox"></option>
+          <option value="Chrome"></option>
+          <option value="Opera"></option>
+          <option value="Safari"></option>
+        </datalist>
+
+        <br />
+      </fieldset>
+
+      <input type="submit" value="Posaljite podatke" />
+    </form>
+  </body>
+</html>
