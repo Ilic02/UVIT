@@ -1,0 +1,72 @@
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    border-radius: 5px;
+    margin: 0;
+    padding: 3%;
+    font-style: italic;
+}
+
+main{
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+#left{
+    width: 48%
+}
+
+#right{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 48%;
+}
+
+#leftTitle{
+    background-color: lightblue;
+}
+
+#rightTitle{
+    background-color: purple;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    text-align: center;
+}
+
+thead{
+    background-color: lightblue;
+}
+
+tr{
+    border-bottom: 1px solid gray;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+span{
+    text-align: center;
+    display: block;
+    font-size: 50px;
+    color: purple;
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 10px;
+    margin: 10px;
+}
+
+p{
+    text-align: center;
+}

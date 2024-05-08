@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 4</title>
+    <link rel="stylesheet" href="/1.css" type="text/css">
+</head>
+<body>
+    <h1>Evrovizija 2021 - <%=drzava %></h1>
+
+    <main>
+        <div id="left">
+            <h2 id="leftTitle">
+                Žiri
+            </h2>
+            <table>
+                <thead>
+                    <th>Poeni</th>
+                    <th>Zemlja</th>
+                </thead>
+
+                <tbody>
+                    <% let ukupno = 0
+                        for(let rez of rezultati) {  
+                        ukupno += Number.parseInt(rez.poeni) %>
+                        <tr>
+                            <td> <%= rez.poeni %> </td>
+                            <td> <%= rez.drzavaKojaGlasa %></td>
+                        </tr>
+                    <%}%>
+                </tbody>
+                    
+            </table>
+        </div>
+
+        <div id="right">
+            <h2 id="rightTitle">Publika</h2>
+            <span><%= ukupno%> </span>
+            <p>poena osvojeno od <%= tip %></p>
+        </div>
+    </main>
+    
+</body>
+</html>
