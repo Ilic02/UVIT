@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 1</title>
+    <link rel="stylesheet" href="./1.css" type="text/css">
+</head>
+<body>
+    <h1>Meteoroloske statistike</h1>
+
+    <main>
+        <div id="left">
+            <h2>Tekuce informacije</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grad</th>
+                        <th>Drzava</th>
+                        <th>Najniza temperatura</th>
+                        <th>Prosecna temperatura</th>
+                        <th>Najvisa temperatura</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Beograd</td>
+                        <td>Srbija</td>
+                        <td>24</td>
+                        <td>28.33</td>
+                        <td>31</td>
+                    </tr>
+                    <tr>
+                        <td>Novi Sad</td>
+                        <td>Srbija</td>
+                        <td>26</td>
+                        <td>28.60</td>
+                        <td>31</td>
+                    </tr>
+                    <tr>
+                        <td>Berlin</td>
+                        <td>Nemacka</td>
+                        <td>19</td>
+                        <td>21.40</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <td>Lisabon</td>
+                        <td>Portugal</td>
+                        <td>18</td>
+                        <td>19.17</td>
+                        <td>22</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="right">
+            <h2>Detaljne informacije</h2>
+            <form>
+                <p>Odaberite grad<span>*</span>:</p>
+                <select>
+                    <option>Beograd</option>
+                    <option>Novi Sad</option>
+                    <option>Berlin</option>
+                    <option>Lisabon</option>
+                </select>
+                <p>Urediti po<span>*</span>:</p>
+                <input type="radio" name="rb"> Datumu opadajuce <br>
+                <input type="radio" name="rb"> Datumu rastuce <br><br>
+                <input type="submit" id="submit" value="Prikazi detaljne informacije">
+            </form>
+        </div>
+    </main>
+    
+</body>
+</html>

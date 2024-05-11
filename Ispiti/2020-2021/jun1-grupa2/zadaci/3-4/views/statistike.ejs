@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 3</title>
+    <link rel="stylesheet" href="/1.css" type="text/css">
+</head>
+<body>
+    <h1>Meteoroloske statistike</h1>
+
+    <main>
+        <div id="left">
+            <h2>Tekuce informacije</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grad</th>
+                        <th>Drzava</th>
+                        <th>Najniza temperatura</th>
+                        <th>Prosecna temperatura</th>
+                        <th>Najvisa temperatura</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(const stat of statistike){ %>
+
+                        <tr>
+                            <td><%= stat.grad%></td>
+                            <td><%= stat.drzava%></td>
+                            <td><%= stat.min%></td>
+                            <td><%= stat.avg%></td>
+                            <td><%= stat.max%></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+        <div id="right">
+            <h2>Detaljne informacije</h2>
+            <form action="/meteo/detalji" method="post">
+                <p>Odaberite grad<span>*</span>:</p>
+                <select name="grad">
+                    <% for(const stat of statistike) { %>
+                        <option value="<%=stat.grad%>"><%=stat.grad%></option>
+                    <% } %>
+                </select>
+                <p>Urediti po<span>*</span>:</p>
+                <input type="radio" name="rb" value="opadajuce"> Datumu opadajuce <br>
+                <input type="radio" name="rb" value="rastuce"> Datumu rastuce <br><br>
+                <input type="submit" id="submit" value="Prikazi detaljne informacije">
+            </form>
+        </div>
+    </main>
+    
+    <script src="/3.js"></script>
+
+</body>
+</html>
