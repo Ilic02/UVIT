@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Zadatak 3</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="/1.css">
+    </head>
+    <body>
+        <main>
+            <form method="post", action="/statistike/unesi-statistiku">
+            <div id="levi">
+                <br>
+                <h1>Tekuca statistika</h1>
+                <label for="smer" class="form">Smer:</label>
+                <br><br>
+                <input type="text" name="smer" value="<%= smer %>">
+                <br><br>
+                <label for="brojStudenata" class="form">Broj studenata:</label>
+                <br><br>
+                <input type="text" name="broj" value="<%= brStudenata %>">
+                <br><br>
+                <label for="prosecnaOcena" class="form">Prosecna ocena:</label>
+                <br><br>
+                <input type="text" name="prosek" value="<%= prosek %>">
+                <br><br>
+                <label for="najistaknutiji" class="form">Najistaknutiji na smeru:</label>
+                <br><br>
+                <input type="text" name="student" value="<%= najistaknutiji %>">
+                <br><br>
+                <label for="datum" class="form">Datum unosa statistike:</label>
+                <br><br>
+                <input type="date" name="datum">
+                <br><br>
+                <input type="checkbox" name="imaKomentar" class="form"><strong>Unesite komentar</strong>
+                <br><br>
+                <label for="komentar" class="form">Komentar:</label>
+                <br><br>
+                <textarea></textarea>
+                <br><br>
+                <input type="submit" name="submit" value="Unesi tekucu statistiku">
+                <br><br>
+            </form>
+            </div>
+            <div id="desni">
+                <br>
+               <h1>Istorija statistika za smer: Informatika</h1>
+               <br>
+               <div>
+                <% for (const i of istorija) { %>
+                    <label class="lbl1">Datum: <%= i.datum.toLocaleDateString('srb') %></label>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="levaTabela">Broj studenata:</td>
+                                <td class="desnaTabela"><%= i.brojStudenata %></td>
+                            </tr>
+                            <tr>
+                                <td class="levaTabela">Prosecna ocena:</td>
+                                <td class="desnaTabela"><%= i.prosek %></td>
+                            </tr>
+                            <tr>
+                                <td class="levaTabela">Najistaknutiji na smeru:</td>
+                                <td class="desnaTabela"><%= i.student %></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <% if(i.imaKomentar){ %>
+                        <p><%= i.komentar %></p>
+                    <%}%>
+                <%}%>
+               <br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+        </main>
+    </body>
+</html>

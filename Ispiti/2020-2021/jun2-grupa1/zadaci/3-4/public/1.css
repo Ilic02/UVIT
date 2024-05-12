@@ -1,0 +1,105 @@
+main{
+    width: 80%;
+    margin: auto;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+#levi{
+    background-image: linear-gradient(to bottom, red, white 8%, white);
+    border: 2px solid red;
+    width: 45%;
+    text-align: left;
+    margin: auto;
+    display: inline-block;
+    border-bottom: 0;
+}
+
+.form{
+    font-style:italic;
+    font-weight: bold;
+}
+input[type = "text"]{
+    background-color: lightgray;
+    border: 1px solid red;
+    width: 80%;
+    margin-left: 10%;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+label{
+    margin-left: 10%;
+}
+
+input[type = "date"]{
+    border: 1px solid red;
+    width: 80%;
+    margin-left: 10%;
+    padding: 5px;
+    border-radius: 5px;
+}
+textarea{
+    border: 1px solid red;
+    width: 80%;
+    margin-left: 10%;
+    padding: 10px;
+    border-radius: 5px;
+}
+input[type = "checkbox"]{
+    margin-left: 10%;
+}
+
+input[type = 'submit']{
+    margin-left: 30%;
+    padding: 10px;
+}
+
+#desni{
+    background-image: linear-gradient(to bottom, rgb(31, 153, 239), white 8%, white);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    border: 1px solid rgb(31, 153, 239);
+    margin-top: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    border-bottom: 0;
+}
+
+.lbl1{
+    margin-left: 40%;
+    color: rgb(31, 153, 239);
+}
+table{
+    margin: auto;
+    border: 1px solid rgb(31, 153, 239);
+    width: 60%;
+}
+
+.lbl2{
+    color: rgb(31, 153, 239);
+    margin-left: 20%;
+}
+
+.levaTabela{
+    text-align: left;
+    font-weight: bold;
+}
+
+.desnaTabela{
+    text-align: right;
+}
+
+p{
+    text-align: center;
+    color: rgb(31, 153, 239);
+
+}
