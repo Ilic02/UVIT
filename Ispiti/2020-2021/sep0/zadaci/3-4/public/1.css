@@ -1,0 +1,66 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+    height: 80px;
+}
+
+header{
+    text-align: center;
+    position: relative;
+    width: auto;
+    padding: 15px;
+    color: blue;
+}
+
+#krugovi1{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#krugovi2{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+div{
+    width: 100%;
+}
+
+table{  
+    border: 2px solid blue;
+    text-align: center;
+    margin-top: -200;
+    width: 100%;
+    border-collapse: collapse;
+    padding: 20px;
+}
+
+td{
+    border: 2px solid blue;
+}
+
+#gray{
+    background-color: silver;
+}
+
+#brown{
+    background-color: rgb(228, 89, 51);
+}
+
+#yellow{
+    background-color: yellow;
+}
+
+input{
+    padding: 5px;
+    width: 50%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+}
+

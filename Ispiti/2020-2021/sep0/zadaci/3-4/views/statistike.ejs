@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 4</title>
+    <link rel="stylesheet" href="/1.css" type="text/css">
+    <style>
+        button{
+        padding: 5px;
+        width: 50%;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        display: table;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Statistike: <%= drzava %></h1>
+        <img src="/krugovi.png" alt="krugovi" id="krugovi1">
+        <img src="/krugovi.png" alt="krugovi" id="krugovi2">
+    </header>
+    <div>
+        <form method="get" action="/olimpijada/statistike">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kategorija / Tip</th>
+                        <th>Timski</th>
+                        <th>Individualni</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Zene</td>
+                        <td><%=statistike.zT%></td>
+                        <td><%=statistike.zI%></td>
+                    </tr>
+                    <tr>
+                        <td>Muskarci</td>
+                        <td><%=statistike.mT%></td>
+                        <td><%=statistike.mI%></td>
+                    </tr>
+                </tbody>
+            </table>
+
+                <button>Pocetna stranica</button>
+        </form>
+    </div>
+</body>
+</html>

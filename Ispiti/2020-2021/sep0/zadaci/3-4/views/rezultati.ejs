@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 3</title>
+    <link rel="stylesheet" href="/1.css" type="text/css">
+</head>
+<body>
+    <header>
+        <% if(rezultati.length == 0){ %>
+            <h1>Nema rezultata za unetu drzavu:</h1>
+        <% }%>
+        <h1><%= drzava %></h1>
+        <img src="/krugovi.png" alt="krugovi" id="krugovi1">
+        <img src="/krugovi.png" alt="krugovi" id="krugovi2">
+    </header>
+    <div>
+        <form method="get" action="/olimpijada/statistike">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sport</th>
+                        <th>Kategorija</th>
+                        <th>Tip</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(const r of rezultati) {%>
+                        <tr style="background-color: <%= r.medalja %>;">
+                            <td><%= r.sport %></td>
+                            <td><%= r.kategorija %></td>
+                            <td><%= r.timski %></td>
+                        </tr>
+                    <% }%>
+                </tbody>
+            </table>
+            <input type="hidden" name="drzava" value="<%= drzava %>">
+            <input type="submit" name="submit" value="Prikazi statistike">
+        </form>
+    </div>
+</body>
+</html>
