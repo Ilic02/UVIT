@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 3</title>
+
+    <style>
+        body{
+            width: 60%;
+        }
+        form{
+            margin: auto
+        }
+        input[type='text']{
+            margin-left: 5px;
+            padding: 5px;
+            border-radius: 5px;
+            width: 25%;
+        }
+        input[type='submit']{
+            padding: 5px;
+            border-radius: 5px;
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+    <form action="/raspored", method="get">
+        <label>Grupa:</label>
+        <input type="text" name="grupa"><br><br>
+        <input type="submit" name="prikazi" value="Prikazi raspored">
+    </form>
+</body>
+</html>
