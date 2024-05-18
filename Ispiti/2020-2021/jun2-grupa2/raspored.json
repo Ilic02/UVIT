@@ -1,0 +1,165 @@
+[{
+  "_id": {
+    "$oid": "60d5a308756298555bc04340"
+  },
+  "godina": 1,
+  "smer": "M",
+  "termin": {
+    "$date": "2021-07-03T13:00:00.00Z"
+  },
+  "predmet": "Programiranje 2"
+},
+{
+  "_id": {
+    "$oid": "60d5a308756298555bc0433e"
+  },
+  "godina": 1,
+  "smer": "M",
+  "termin": {
+    "$date": "2021-06-21T13:00:00.00Z"
+  },
+  "predmet": "Programiranje 1"
+},
+{
+  "_id": {
+    "$oid": "60d5a308756298555bc0434b"
+  },
+  "godina": 4,
+  "smer": "M",
+  "termin": {
+    "$date": "2021-06-22T17:00:00.00Z"
+  },
+  "predmet": "Programiranje baza podataka"
+},
+{
+  "_id": {
+    "$oid": "60d5a308756298555bc04341"
+  },
+  "godina": 1,
+  "smer": "I",
+  "termin": {
+    "$date": "2021-06-21T09:00:00.00Z"
+  },
+  "predmet": "Programiranje 1"
+},
+{
+  "_id": {
+    "$oid": "60d5a308756298555bc04342"
+  },
+  "godina": 1,
+  "smer": "I",
+  "termin": {
+    "$date": "2021-06-26T09:00:00.00Z"
+  },
+  "predmet": "Programiranje 2"
+},
+{
+  "_id": {
+    "$oid": "60d5a308756298555bc04343"
+  },
+  "godina": 1,
+  "smer": "I",
+  "termin": {
+    "$date": "2021-06-28T13:00:00.00Z"
+  },
+  "predmet": "Diskretne strukture 1"
+},
+{
+  "_id": {
+    "$oid": "60d5a308756298555bc04345"
+  },
+  "godina": 2,
+  "smer": "M",
+  "termin": {
+    "$date": "2021-06-25T09:00:00.00Z"
+  },
+  "predmet": "Objektno-orijentisano programiranje"
+},
+{
+  "_id": {
+    "$oid": "60d5a308756298555bc04355"
+  },
+  "godina": 2,
+  "smer": "I",
+  "termin": {
+    "$date": "2021-06-25T09:00:00.00Z"
+  },
+  "predmet": "Objektno-orijentisano programiranje"
+},
+{
+  "_id": {
+    "$oid": "60d5a308756298555bc04346"
+  },
+  "godina": 2,
+  "smer": "M",
+  "termin": {
+    "$date": "2021-06-29T13:00:00.00Z"
+  },
+  "predmet": "Geometrija 2"
+},
+{
+  "_id": {
+    "$oid": "60d5a308756298555bc04347"
+  },
+  "godina": 4,
+  "smer": "M",
+  "termin": {
+    "$date": "2021-06-28T13:00:00.00Z"
+  },
+  "predmet": "Uvod u veb i internet tehnologije"
+},
+{
+  "_id": {
+    "$oid": "60d5a308756298555bc04348"
+  },
+  "godina": 2,
+  "smer": "I",
+  "termin": {
+    "$date": "2021-06-24T17:00:00.00Z"
+  },
+  "predmet": "Konstrukcija i analiza algoritama"
+},
+{
+  "_id": {
+    "$oid": "60d5a308756298555bc04349"
+  },
+  "godina": 3,
+  "smer": "M",
+  "termin": {
+    "$date": "2021-06-24T13:00:00.00Z"
+  },
+  "predmet": "Konstrukcija i analiza algoritama"
+},
+{
+  "_id": {
+    "$oid": "60d5a308756298555bc0434a"
+  },
+  "godina": 3,
+  "smer": "I",
+  "termin": {
+    "$date": "2021-06-22T17:00:00.00Z"
+  },
+  "predmet": "Programiranje baza podataka"
+},
+{
+  "_id": {
+    "$oid": "60d5a308756298555bc0433f"
+  },
+  "godina": 1,
+  "smer": "M",
+  "termin": {
+    "$date": "2021-07-02T09:00:00.00Z"
+  },
+  "predmet": "Geometrija 1"
+},
+{
+  "_id": {
+    "$oid": "60d5a308756298555bc04357"
+  },
+  "godina": 2,
+  "smer": "I",
+  "termin": {
+    "$date": "2021-06-28T13:00:00.00Z"
+  },
+  "predmet": "Uvod u veb i internet tehnologije"
+}]

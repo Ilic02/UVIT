@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 4</title>    
+    <link rel="stylesheet" href="/1.css">
+    <style>
+        table{
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Raspored ispita studenta:</h1>
+    <h1><%= info.ime %>  <%= info.prezime %></h1>
+    <table>
+        <thead>
+            <th>Termin</th>
+            <th>Predmet</th>
+        </thead>
+        <tbody>
+            <% for(r of raspored) { %>
+                <tr>
+                    <td> <!--ChatGPT -->
+                        <%= r.termin.getDate() %>.<%= ('0' + (r.termin.getMonth() + 1)).slice(-2) %>.<%= r.termin.getFullYear() %>. u   
+                        <%= ('0' + r.termin.getHours()).slice(-2) %>:<%= ('0' + r.termin.getMinutes()).slice(-2) %>
+                    </td>
+                    <td><%= r.predmet %></td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 1</title>
+    <link rel="stylesheet" href="./1.css" type="text/css">
+</head>
+<body>
+    <h1>Raspored ispita</h1>
+    <main>
+        <div id="left">
+            <table>
+                <thead>
+                    <th>Smer</th>
+                    <th>Godina</th>
+                    <th class="taLeft">Termin</th>
+                    <th class="taLeft">Predmet</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>M</td>
+                        <td>3</td>
+                        <td class="taLeft">24.6.2021. u 13:00</td>
+                        <td class="taLeft">Konstrukcija i analiza algoritama</td>
+                    </tr>
+                    <tr>
+                        <td>I</td>
+                        <td>1</td>
+                        <td class="taLeft">21.6.2021. u 9:00</td>
+                        <td class="taLeft">Programiranje 1</td>
+                    </tr>
+                    <tr>
+                        <td>I</td>
+                        <td>2</td>
+                        <td class="taLeft">28.6.2021. u 13:00</td>
+                        <td class="taLeft">Uvod u veb i internet tehnologije</td>
+                    </tr>
+                    <tr>
+                        <td>I</td>
+                        <td>3</td>
+                        <td class="taLeft">22.6.2021 u 17:00</td>
+                        <td class="taLeft">Programiranje baza podataka</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="right">
+            <hr>
+            <form>
+                <label>Indeks:</label><br>
+                <input type="text" name="indeks"><br><br>
+                <input type="submit" name="prikaziIspite" value="Prikazi ispite">
+            </form>
+            <hr><br>
+            <form>
+                <label>Smer:</label><br>
+                <select name="smer" >
+                    <option>--- Odaberite smer ---</option>
+                </select><br><br>
+                <label>Godina:</label><br>
+                <input type="text" name="godina"><br><br>
+                <label>Datum:</label><br>
+                <input type="date" name="datum"><br><br>
+                <label>Vreme:</label><br>
+                <input type="text" name="vreme"><br><br>
+                <label>Predmet</label><br>
+                <input type="text" name="predmet"><br><br>
+                <input type="submit" name="noviIspit" value="Dodaj novi ispit">
+            </form>
+            <hr>
+        </div>
+    </main>
+</body>
+</html>

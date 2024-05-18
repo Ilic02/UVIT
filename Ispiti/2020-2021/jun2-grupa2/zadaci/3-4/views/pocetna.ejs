@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 3</title>
+    <link rel="stylesheet" href="/1.css" type="text/css">
+</head>
+<body>
+    <h1>Raspored ispita</h1>
+    <main>
+        <div id="left">
+            <table>
+                <thead>
+                    <th>Smer</th>
+                    <th>Godina</th>
+                    <th class="taLeft">Termin</th>
+                    <th class="taLeft">Predmet</th>
+                </thead>
+                <tbody>
+                    <% for(const p of podaci) {%>
+                        <tr>
+                            <td><%= p.smer %></td>
+                            <td><%= p.godina %></td>
+                             <td> <!--ChatGPT -->
+                                <%= p.termin.getDate() %>.<%= ('0' + (p.termin.getMonth() + 1)).slice(-2) %>.<%= p.termin.getFullYear() %>. u   
+                                <%= ('0' + p.termin.getHours()).slice(-2) %>:<%= ('0' + p.termin.getMinutes()).slice(-2) %>
+                            </td>
+                            <td><%= p.predmet %></td>
+                        </tr>
+                    <%}%>
+                </tbody>
+            </table>
+        </div>
+        <div id="right">
+            <hr>
+            <form action="ispiti/student" method="get">
+                <label>Indeks:</label><br>
+                <input type="text" name="indeks"><br><br>
+                <input type="submit" name="prikaziIspite" value="Prikazi ispite">
+            </form>
+            <hr><br>
+            <form method="post" action="/ispiti">
+                <label>Smer:</label><br>
+                <select name="smer" >
+                    <option>--- Odaberite smer ---</option>
+                    <option value="I">I</option>
+                    <option value="M">M</option>
+                </select><br><br>
+                <label>Godina:</label><br>
+                <input type="text" name="godina"><br><br>
+                <label>Datum:</label><br>
+                <input type="date" name="datum"><br><br>
+                <label>Vreme:</label><br>
+                <input type="text" name="vreme"><br><br>
+                <label>Predmet</label><br>
+                <input type="text" name="predmet"><br><br>
+                <input type="submit" name="noviIspit" value="Dodaj novi ispit">
+            </form>
+            <hr>
+        </div>
+    </main>
+</body>
+</html>

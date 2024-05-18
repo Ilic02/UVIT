@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "60d59b55756298555bc04339"
+  },
+  "indeks": "201/2019",
+  "ime": "Kristina",
+  "prezime": "Urosevic",
+  "smer": "I"
+},{
+  "_id": {
+    "$oid": "60d59c32756298555bc0433a"
+  },
+  "indeks": "91/2019",
+  "ime": "Boris",
+  "prezime": "Ivanovic",
+  "smer": "M"
+},{
+  "_id": {
+    "$oid": "60d59c32756298555bc0433b"
+  },
+  "indeks": "1/2020",
+  "ime": "Olga",
+  "prezime": "Vujic",
+  "smer": "M"
+},{
+  "_id": {
+    "$oid": "60d59c32756298555bc0433c"
+  },
+  "indeks": "20/2020",
+  "ime": "Lazar",
+  "prezime": "Ristic",
+  "smer": "I"
+}]
