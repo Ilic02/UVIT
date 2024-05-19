@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 3</title>
+    <link rel="stylesheet" href="/1.css">
+    <style>
+        div{
+            border: 2px solid black;
+            margin: auto;
+            width: 30%;
+        }
+        input[type='submit']{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1><%= podaci %></h1>
+    <table>
+        <tr>
+            <% for(let m of meseci) { %>
+                <td><%= m %></td>
+            <%}%>
+        </tr>
+    </table>
+
+    <% for(let plan of planovi) { %> 
+        <div class="plan<%= plan.celodnevna_aktivnost ? ' busy' : '' %>"> <%= plan.datum.getDate() %> | <%= plan.dogadjaj %>
+            <form method="post" action="/calendar/obrisi">
+                <input type="text" name='id' value="<%= plan._id %>" hidden>
+                <input type="text" name='mesec' value="<%= plan.mesec %>" hidden>
+                <input type="submit" value="obrisi">
+            </form>
+        </div>
+    <% } %>
+
+    <!-- Mrzelo me da stilizujem ovaj div.... -->
+</body>
+</html>

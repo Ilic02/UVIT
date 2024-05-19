@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 3</title>
+    <link rel="stylesheet" href="/1.css">
+</head>
+<body>
+    <h1>Planer</h1>
+    <table>
+        <tr>
+            <% for(let m of meseci) { %>
+                <td><%= m %></td>
+            <%}%>
+        </tr>
+    </table>
+    <form method="post", action="/calendar/month">
+        <select name="mesec">
+            <% for(let m of meseci) { %>
+            <option value="<%= m  %>"><%= m %></option>
+            <% } %>
+        </select><br>
+        <input type="submit" value="prikazi">
+    </form>
+</body>
+</html>
