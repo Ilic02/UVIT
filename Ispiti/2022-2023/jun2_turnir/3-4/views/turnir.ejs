@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 3</title>
+    <link rel="stylesheet" href="/1.css">
+</head>
+<body>
+    <h1><span><img src="/left.gif" alt="left"></span> <%= turnir %> <span><img src="/left.gif" alt="left"></span></h1>
+    <hr>
+    <%for(let i of igre) {%>
+    <div id="first">
+        <table>
+           <tr>
+            <td>Vreme: <%= i.vreme %></td>
+           </tr>
+           <tr>
+            <td><%= i.igrac1 %></td>
+            <% for(let p of i.poeni1.split('-')) {%>
+                <td><%= p %></td>
+            <% } %>
+           </tr>
+           <tr>
+            <td><%= i.igrac2 %></td>
+            <% for(let p of i.poeni2.split('-')) {%>
+                <td><%= p %></td>
+            <% } %>
+           </tr>
+        </table>
+    </div>
+    <% } %>
+
+    <h1><span><img src="/left.gif" alt="left"></span> Add game <span><img src="/left.gif" alt="left"></span></h1>
+
+
+    <div id="third">
+        <form method="get" action="/unesiturnir">
+            <label>Vreme:</label>
+            <input type="number" placeholder="hh" name="sati"> :
+            <input type="number" placeholder="mm" name="minuti"><br><br>
+            <input type="text" placeholder="prvi igrac" name="igrac1">
+            <input type="number" name="a1">
+            <input type="number" name="a2">
+            <input type="number" name="a3"><br><br>
+            <input type="text" placeholder="drugi igrac" name="igrac2">
+            <input type="number" name="b1">
+            <input type="number" name="b2">
+            <input type="number" name="b3"><br><br>
+            <input type="text" value="<%= turnir %>" name="turnir" hidden>
+            <input type="submit" value="Unesi igru">
+        </form>
+    </div>
+</body>
+</html>

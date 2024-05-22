@@ -1,0 +1,60 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+hr{
+    height: 20px;
+    background-image: url('./ball.png');
+    background-repeat: repeat;
+    background-size: contain;
+    border: none;
+    margin: 20px auto;
+}
+
+#first{
+    width: 100%;
+    border: 3px solid green;
+    border-radius: 10px;
+}
+
+#second{
+
+    margin-top: 20px;
+    width: 100%;
+    border: 3px solid green;
+    border-radius: 10px;
+}
+
+table{
+    padding: 10px;
+    margin:auto;
+    width: 20%;
+}
+
+tr{
+    background-color: lightgreen;
+}
+
+#third{
+    width: 100%;
+}
+
+form{
+    padding: 10px;
+    margin:auto;
+    width: 30%;
+}
+
+input[type = 'number']{
+    width: 30px;
+}
+
+input[type='submit']{
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+}

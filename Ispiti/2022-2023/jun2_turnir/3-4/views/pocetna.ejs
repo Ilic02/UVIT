@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 3</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1><span><img src="/left.gif" alt="left"></span> Teniski turniri <span><img src="/left.gif" alt="left"></span></h1>
+
+    <form action="/turnir" method="get">
+        <select name="turnir">
+            <% for(let turnir of turniri){ %>
+                <option value="<%= turnir %>"><%= turnir %></option>
+            <%}%>
+        </select><br>
+        <input type="submit" value="Prikazi turnir">
+    </form>
+</body>
+</html>
