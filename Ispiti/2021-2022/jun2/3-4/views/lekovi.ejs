@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zadatak 3</title>
+
+        <!-- Mrzelo me da pravim css za ovo :) -->
+    </head>
+    <body>
+        <% if (lekovi.length ===0){%>
+            Nema trazenih lekova
+        <% } else { %>
+        Trazeni lekovi su:
+        <form action="/recept" method="post">
+        <% for (let lek of lekovi) { %>
+            lek:
+            <%= lek.nazivLeka %>
+            <br>
+            proizvodjac:
+            <%= lek.proizvodjac %>
+            <br> simptomi:
+            <% for (let s of lek.simptomi){ %>
+                <%= s + ' ' %>
+            <%} %>
+            <br>
+            miligrami:
+            <% for (let m of lek.miligrami){ %>
+                <button><%=m %></button>   
+            <%}%>
+            <br>
+        <% } %>
+        
+        <% } %>
+        <input type="submit" value="Posalji">
+        <input type="text" name="ime" value="<%= ime %>" hidden> 
+    </form>
+    </body>
+
+    <script>
+                
+        let buttoni=document.getElementsByTagName("button");
+        for (let b of buttoni){
+            b.addEventListener('click', function(){
+                    b.style.backgroundColor="red";
+            });
+        }
+        
+            
+    </script>
+</html>

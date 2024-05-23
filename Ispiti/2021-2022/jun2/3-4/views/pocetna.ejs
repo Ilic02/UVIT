@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 3</title>
+    <link rel="stylesheet" href="/1.css">
+</head>
+<body>
+    <div>
+        <h1>Podaci o <br>pacijentu</h1>
+        <form action="/lekovi" method="get">
+            <fieldset>
+                <legend><b>Licne info</b></legend>
+                <label><b>Ime i prezime:</b></label><br>
+                <input type="text" name="ime"><br>
+                <label><b>JMBG</b></label><br>
+                <input type="text" name="jmbg"><br>
+            </fieldset><br>
+            <fieldset>
+                <legend><b>Medicinske info</b></legend>
+                <label><b>Simptomi:</b></label><br>
+                <input type="checkbox" name="upalaGrla"><b>upala grla </b><br>
+                <input type="checkbox" name="curenjeNos"><b>curenje iz nosa</b> <br>
+                <input type="checkbox" name="temperatura"><b>temperatura</b> <br>
+                <input type="checkbox" name="glavobolja"><b>glavobolja</b> <br>
+            </fieldset> <br>
+            <input type="submit" value="Posalji">
+        </form>
+    </div>
+</body>
+</html>
