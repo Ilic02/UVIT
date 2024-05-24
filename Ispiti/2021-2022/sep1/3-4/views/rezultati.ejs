@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 3</title>
+</head>
+<body>
+    <h1>Zdravo, <%= username %></h1>
+    <% for(let r of rezultati) {%>
+        <label>Broj osvojenih poena: <%= r.poeni %></label><br>
+        <label>Tacno odgovoreno na sledeca pitanja:</label>
+        <ul>
+                <%for(let pit of r.pitanja){%>
+                    <ul><%= pit %></ul>
+                <%}%>
+        </ul>
+    <%}%>
+
+    <form action="/novopitanje" method="post">
+        <label>Dodaj novo pitanje u bazu:</label><br>
+        <label>Pitanje:</label>
+        <input type="text" name="pitanje"><br>
+        <label>Odgovor:</label>
+        <select name="odgovor">
+            <option value="Da">Da</option>
+            <option value="Ne">Ne</option>
+            <option value="Ne znam">Ne znam</option>
+        </select><br>
+        <label>Oblast:</label>
+        <select name="oblast">
+            <option value="Matematika">Matematika</option>
+            <option value="Sport">Sport</option>
+            <option value="Biologija">Biologija</option>
+            <option value="Obrazovanje">Obrazovanje</option>
+        </select><br>
+        <label>Tezina:</label>
+        <input type="text" name="tezina"><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
