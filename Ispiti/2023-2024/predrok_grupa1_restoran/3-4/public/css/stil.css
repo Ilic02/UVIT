@@ -1,0 +1,45 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+}
+
+.box{
+    display: inline-block;
+    width: 32%;
+    margin-right: 1%;
+    vertical-align: top;
+    padding: 10px;
+}
+hr{
+    border: 1px solid gray;
+}
+
+.container{
+    background-image: linear-gradient(to top, #fbecd8, white);
+}
+
+#first{
+    background-color: #fbead7;
+    border: 5px solid #ffe3bc;
+    border-radius: 20px;
+}
+
+form{
+    background-color: transparent;
+}
+
+button{
+    color: gray;
+    border: 1px solid gray;
+    border-radius: 3px;
+    width: 100%;
+    margin-bottom: 10px;
+}

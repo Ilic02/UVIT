@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 3</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/stil.css">
+</head>
+<body>
+    <main class="container">
+        <hr>
+        <h1>Recipes</h1>
+        <% for(let r of recipes){ %>
+        <div id="first">
+            <div class="box">
+                <h2><%= r.meal %></h2>
+                <img src="/assets/<%= r.image %>" alt="pizza">
+            </div>
+            <div class="box">
+                <%= r.preparation %>
+            </div>
+            <div class="box">
+                <ul>
+                    <% for(ing of r.ingredients){%>
+                    <li><%= ing %></li>
+                    <%}%>
+                </ul>
+            </div>
+        </div>
+        <%}%>
+        <h1>Add new recipe</h1>
+        <form action="/new" method="post">
+            <label>Recipe name</label><br>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="name"><br>
+
+            <label>Recipe image name</label><br>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="image"><br>
+
+            <label>Preparation steps</label><br>
+            <textarea class="form-control" aria-label="With textarea" name="steps"></textarea>
+
+            <label>Ingredients</label><br>
+            <textarea class="form-control" aria-label="With textarea" name="ingredients"></textarea><br>
+
+            <button>Add new recipe</button>
+        </form>
+    </main>
+
+    
+</body>
+</html>
