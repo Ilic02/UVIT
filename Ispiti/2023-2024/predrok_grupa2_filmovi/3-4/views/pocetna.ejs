@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 3</title>
+    <link rel="stylesheet" href="/1.css">
+    <link rel="stylesheet" href="/bootstrap.css">
+</head>
+<body>
+    <h1>Dnevnik citanja</h1>
+    <main class="container">       
+        <div id="left">
+            <% for(let k of knjige) {%>
+            <table>
+                <tr>
+                    <td>Naslov</td>
+                    <td><b><%= k.title %></b></td>
+                </tr>
+                <tr>
+                    <td>Pisac</td>
+                    <td><b><%= k.author %></b></td>
+                </tr>
+                <tr>
+                    <td>Godina Izdanja</td>
+                    <td><b><%= k.year %></b></td>
+                </tr>
+                <tr>
+                    <td>Broj strana</td>
+                    <td><b><%= k.pages %></b></td>
+                </tr>
+                <tr>
+                    <td>Procitano</td>
+                    <td><b><%= k.read ? "da" : "ne" %></b></td>
+                </tr>
+                <tr>
+                    <td>Link</td>
+                    <td><form action="/knjige" method="get">
+                        <input type="text" name="id" value="<%= k._id %>" hidden>
+                        <button class="btn btn-success">Informacije</button>
+                    </form></td>
+                </tr>
+            </table>
+            <% } %>
+        </div>
+
+        <div id="right">
+            <h2>Unesi novu knjigu</h2>
+            <form action="/novaKnjiga" method="post">
+                <label>Naslov</label><br>
+                <input type="text" class="form-control" name="title"><br>
+
+                <label>Pisac</label><br>
+                <input type="text" class="form-control" name="author"><br>
+
+                <label>Godina izdanja</label><br>
+                <input type="text" class="form-control" name="year"><br>
+
+                <label>Broj strana</label><br>
+                <input type="text" class="form-control" name="pages"><br>
+
+                <button class="btn btn-primary btn-lg btn-block">Unesi knjigu</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
