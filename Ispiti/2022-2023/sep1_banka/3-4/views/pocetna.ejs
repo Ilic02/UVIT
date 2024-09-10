@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 3</title>
+    <link rel="stylesheet" href="/1.css" type="text/css">
+</head>
+<body>
+    <h1>
+        Banka - uvid u stanje
+    </h1>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ime i Prezime</th>
+                    <th>Stanje na racunu</th>
+                </tr>
+            </thead>
+            <% for(let t of tabela){%>
+            <tbody>
+                <% if(t.stanje >= 0) {%>
+                <tr>
+                    <td><%= t.ime %> <%= t.prezime %></td>
+                    <td class="taRight"><%= t.stanje %> $</td>
+                </tr>
+                <%} else if(t.stanje < 0) {%>
+                    <tr class="minus">
+                        <td><%= t.ime %> <%= t.prezime %></td>
+                        <td class="taRight"><%= t.stanje %> $</td>
+                    </tr>
+                <%}%>
+            </tbody>
+            <% } %>
+        </table>
+
+        <form action="/bank/dodaj" method="post">
+            <input type="text" value="Ime i prezime" name="imePrezime">
+            <input type="text" value="Stanje na racunu" name="stanje">
+            <button class="submit">Submit</button>
+            <button class="cancel">Cancel</button>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 3</title>
+    <link rel="stylesheet" href="/1.css" type="text/css">
+</head>
+<body>
+    <h1>
+        Banka - uvid u stanje
+    </h1>
+    <main>
+        <form action="/bank/transakcija" method="post">
+            <select name="select" id="">
+                <% for(let t of tabela){%>
+                <option value="<%= t.ime %>  <%= t.prezime %>"> <%= t.ime %>  <%= t.prezime %></option>
+                <% } %>
+            </select>
+            <br>
+            <input type="text" value="Kolicina"><br>
+            <input type="radio" name="uplataIsplata">Uplati novac <br>
+            <input type="radio" name="uplataIsplata"> Podigni novac <br>
+            <button class="submit">Submit</button>
+            <button class="cancel">Cancel</button>
+        </form>
+    </main>
+</body>
+</html>
