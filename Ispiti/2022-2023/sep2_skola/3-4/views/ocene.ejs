@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 3</title>
+    <link rel="stylesheet" href="/1.css" type="text/css">
+</head>
+<body>
+    <main>
+        <% for(let u of ucenik) {%>
+        <div>
+            <p><%= u.imePrezime %></p>
+        </div>
+    
+        <h1><b>Svedocanstvo</b></h1>
+        <ul>
+            <%for(let o of u.ocene){%>
+            <li>predmet: <%= o.predmet %>, ocena: <%= o.ocena %></li>
+            <%}%>
+        </ul>
+        <% let suma = 0 %>
+        <% let i = 0 %>
+        <% for(let o of u.ocene){ %>
+            <% suma = suma + o.ocena %>
+            <% i++ %>
+            <%}%>
+        <h2><b>Prosecna ocena <%= suma / i %></b></h2>
+        <form action="/unos" method="post">
+            <input type="text" name="imePrezime" value="<%= ucenik[0].imePrezime %>" hidden>
+            <label>Predmet</label>
+            <select name="predmet">
+                <option value="matematika">matematika</option>
+                <option value="fizika">fizika</option>
+                <option value="fizicko">fizicko</option>
+                <option value="hemija">hemija</option>
+            </select>
+            <br><br>
+            <label>Ocena:</label>
+            <input type="number" name="ocena">
+            <br><br>
+            <button>Unesi</button>
+        </form>
+        <%}%>
+    </main>
+</body>
+</html>
