@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 3</title>
+    <link rel="stylesheet" href="/stil.css">
+    <link rel="stylesheet" href="/bootstrap.css">
+</head>
+<body>
+    <h1>Recipes</h1>
+
+    <form action="/search" method="post">
+        <input type="text">
+        <button>Search</button>
+    </form>
+
+    <%for(let recipe of recipes){%>
+    <div class="container text-center" id="glavni">
+      
+        <div class="row align-items-start">
+          <div class="col">
+            <h2><%= recipe.meal%></h2>
+            <img src="/<%= recipe.image%>" alt="pizza">
+          </div>
+          <div class="col">
+            <p>
+                <%= recipe.preparation%>
+            </p>
+          </div>
+          <div class="col">
+            <ul>
+                <%for(let ing of recipe.ingredients){%>
+                    <li><%=ing%></li>
+                <%}%>
+            </ul>
+          </div>
+        </div>        
+    </div>
+    <br>
+    <%}%>
+    <h1>Add new recipe</h1>
+
+    <form action="/new" method="post">
+        <label for="name">Recipe name</label><br>
+        <input type="text" name="recipe"><br>
+        <label for="image">Recipe image name</label><br>
+        <input type="text" name="image"><br>
+        <label for="preps">Preparation steps</label><br>
+        <textarea id="" name="preparation"></textarea><br>
+        <label for="ingr">Ingredients</label><br>
+        <textarea id="" name="ingredients"></textarea><br><br>
+        <button>Add new recipe</button>
+    </form>
+</body>
+</html>
