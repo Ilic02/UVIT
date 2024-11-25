@@ -1,0 +1,38 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+    background-image: linear-gradient(to bottom, pink, white);
+    font-weight: bold;
+}
+
+table{
+    border: 2px dotted black;
+    width: 100%;
+    margin-top: 10px;
+}
+
+tr{
+    border-bottom: 1px solid black;
+}
+
+h2{
+    text-align: center;
+}
+
+form{
+    margin-left: 120px;
+}
+
+input{
+    width: 70%;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid gray;
+}
+
+#unesi{
+    width: 70%;
+}
