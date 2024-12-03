@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/1.css" />
+    <link rel="stylesheet" href="/bootstrap.css" />
+  </head>
+  <body>
+    <div
+      class="container text-center"
+      style="background-color: white; opacity: 0.85"
+    >
+      <h1><%=film[0].naslov%></h1>
+      <div class="row">
+        <div
+          class="col-12 col-sm-6 col-md-4 mb-4"
+          style="border: 2px solid lightblue; border-radius: 5px"
+        >
+          <h2>Informacije</h2>
+          <label
+            >Godina
+            ------------------------------------<%=film[0].godina%></label
+          >
+          <label
+            >Duzina
+            ------------------------------------<%=film[0].duzina%></label
+          >
+          <label
+            >IMDB ------------------------------------<%=film[0].imdb%></label
+          >
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-4 mb-4"
+          style="border: 2px solid lightblue; border-radius: 5px"
+        >
+          <h2>Glumci</h2>
+          <ul>
+            <%for(g of film[0].glumci){%>
+            <li><%=g%></li>
+            <%}%>
+          </ul>
+          <form method="post" action="/noviGlumac">
+            <label>Unesi glumce:</label>
+            <input type="text" name="noviGlumac" />
+            <input type="hidden" name="id" value="<%=film[0]._id%>">
+            <button>Submit</button>
+          </form>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-4 mb-4"
+          style="border: 2px solid lightblue; border-radius: 5px"
+        >
+          <h2>Zanr</h2>
+          <ul>
+            <%for(z of film[0].zanr){%>
+            <li><%=z%></li>
+            <%}%>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/1.css" />
+    <link rel="stylesheet" href="/bootstrap.css" />
+  </head>
+  <body>
+    <div
+      class="container text-center"
+      style="background-color: white; opacity: 0.85"
+    >
+      <h1>Filmovi</h1>
+      <div class="row">
+        <%for(let film of filmovi){%>
+        <div
+          class="col-12 col-sm-6 col-md-4 mb-4"
+          style="border: 2px solid lightblue; border-radius: 5px"
+        >
+          <form method="post" action="/film">
+            <hr />
+            <h2><%= film.naslov %></h2>
+            <hr />
+            <h3>Glumci</h3>
+            <ul>
+              <%for(let g of film.glumci){%>
+              <li><%= g %></li>
+              <%}%>
+            </ul>
+            <h3>Zanr</h3>
+            <ul>
+              <%for(let z of film.zanr){%>
+              <li><%= z %></li>
+              <%}%>
+            </ul>
+            <input type="hidden" name="id" value=" <%=film._id%>" />
+            <button class="btn btn-outline-info" style="width: 100%">
+              Detaljnije
+            </button>
+          </form>
+        </div>
+        <%}%>
+      </div>
+
+      <hr />
+
+      <h2>Novi film</h2>
+      <form method="get" action="/unesiFilm">
+        <label for="naslov">Naslov:</label>
+        <div class="input-group mb-3 w-50 p-3">
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            name="naslov"
+          />
+        </div>
+        <label for="godina">Godina:</label>
+        <div class="input-group mb-3 w-50 p-3">
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            name="godina"
+          />
+        </div>
+        <label for="duzina">Duzina:</label>
+        <div class="input-group mb-3 w-50 p-3">
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            name="duzina"
+          />
+        </div>
+        <label for="idb">IMDB:</label>
+        <div class="input-group mb-3 w-50 p-3">
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            name="imdb"
+          />
+        </div>
+        <label for="zanr">Zanr:</label>
+        <div class="input-group mb-3 w-50 p-3 ms-auto">
+          <textarea
+            class="form-control"
+            aria-label="With textarea"
+            name="zanr"
+          ></textarea>
+        </div>
+
+        <button type="button" class="btn btn-primary" style="width: 100%">
+          Unesi
+        </button>
+      </form>
+  </body>
+</html>
