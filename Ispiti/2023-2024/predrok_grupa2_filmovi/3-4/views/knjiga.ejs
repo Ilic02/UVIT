@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 3</title>
+    <link rel="stylesheet" href="/1.css">
+    <link rel="stylesheet" href="/bootstrap.css">
+    <style>
+        div{
+            width: 400px;
+            margin: 0 auto;
+            border: 2px solid green;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        strong{
+            text-decoration: underlinez;
+        }
+    </style>
+</head>
+<body>
+<h1><%=data[0].title%></h1>
+    <div>
+    <p>Ova knjiga je napisana od strane <strong><%=data[0].author%></strong>. Ima <strong><%=data[0].pages%></strong> strana i napisana
+    je <strong><%=data[0].year%></strong> godine.</p>
+    <a href="/">Nazad</a>
+    </div>
+</body>
+</html>

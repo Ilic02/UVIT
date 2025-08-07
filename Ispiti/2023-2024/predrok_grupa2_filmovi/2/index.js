@@ -31,27 +31,20 @@ const colors = [
   ];
 
 let tds = document.getElementsByTagName("td");
-  
-let i = 0;
-for(let color of colors){
-    i++;
-}
-
 function changeColors(){
   for(let td of tds){
-    let random = i * Math.random();
-    td.style.border = "2px solid black";
     td.style.width = "100px";
     td.style.height = "100px";
+    td.style.border = "3px solid black"
+    let random = (Math.random()*colors.length);
     td.style.backgroundColor = colors[Math.floor(random)];
   }
 }
-
 changeColors();
 
 let intervalId = setInterval(changeColors, 2000);
 
 let btn = document.getElementById("stop");
-btn.addEventListener('click', function(){
+btn.addEventListener("click", function(){
   clearInterval(intervalId);
 })

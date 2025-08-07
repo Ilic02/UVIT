@@ -1,46 +1,52 @@
-const mongoose = require("mongoose");
-const knjigeSchema = mongoose.Schema(
-  {
+const mongoose = require('mongoose')
+
+const knjigeSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
-    title: {
-      type: String,
+    title:{
+        type: String, 
+        required: true
     },
-    author: {
-      type: String,
+    author:{
+        type: String
     },
-    pages: {
-      type: Number,
+    pages:{
+        type: Number
     },
-    year: {
-      type: Number,
+    year:{
+        type: Number
     },
-    read: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  { collection: "knjige" }
-);
+    read:{
+        type: Boolean,
+        default: false
+    }
+}, {collection : "knjige"});
+
 const knjigeModel = mongoose.model("Knjige", knjigeSchema);
+
 async function dohvatiKnjige() {
-  const knjige = await knjigeModel.find().exec();
-  return knjige;
-}
+    return await knjigeModel.find().exec();
+} 
+
+
 async function unesiKnjigu(naslov, pisac, godina, strane) {
-  const novaKnjiga = new knjigeModel({
-    _id: new mongoose.Types.ObjectId(),
-    title: naslov,
-    author: pisac,
-    pages: strane,
-    year: godina,
-  });
-  await novaKnjiga.save();
+    let newEl = new knjigeModel;
+    newEl._id = new mongoose.Types.ObjectId;
+    newEl.author = pisac;
+    newEl.title = naslov;
+    newEl.year = godina;
+    newEl.pages = strane;
+    newEl.read = false;
+
+
+    await newEl.save();
 }
+
 async function dohvatiKnjigu(id) {
-  return await knjigeModel.find(id).exec();
-}
+    return await knjigeModel.find({_id:id}).exec();
+} 
+
 module.exports = {
-  dohvatiKnjige,
-  unesiKnjigu,
-  dohvatiKnjigu,
+    dohvatiKnjige, 
+    unesiKnjigu,
+    dohvatiKnjigu
 };
