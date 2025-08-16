@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 3</title>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="stylesheet" href="/1.css">
+</head>
+<body>
+    <h1>Welcome</h1>
+    <div class="container text-center">
+  <div class="row">
+    <div class="col">
+        <form><button >The Flight</button></form>
+        <form><button >The City</button></form>
+        <form><button >The Island</button></form>
+        <form><button >The Food</button></form>
+    </div>
+    <div class="col-6">
+      <h2 style="text-align: left; font-weight: bold;">The Flight</h2>
+      <form action="/krajnjadestinacija" method="get">
+        <ul>
+            <%for(let f of flights){%>
+                <li><%=f.from%>-<%=f.to%> <%=f.duration%> hours - <%=f.price%> $</li>
+            <%}%>
+        </ul>
+        <input type="text" name="city" value="<%=flights[0].to%>" hidden>
+        <button>See <%=flights[0].to%></button>
+      </form>
+    </div>
+    <div class="col" id="div3">
+      <h2>What?</h2>
+      <p>Plan your flight.</p>
+      <h2>Where?</h2>
+      <p>Wherever you want.</p>
+      <h2>How?</h2>
+      <p>Using our page.</p>
+    </div>
+  </div>
+</div>
+<footer>Resize the browser window to see how the content respond to resizing.</footer>
+</body>
+</html>

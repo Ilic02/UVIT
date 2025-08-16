@@ -1,0 +1,53 @@
+[
+  {
+    "city": "Belgrade",
+    "description": "capital of Serbia",
+    "questions": [
+      ["why Belgrade", "it's a beautiful city"],
+      ["what can I do in Belgrade", "visit museums"],
+      ["best time to visit", "spring and autumn for mild weather"],
+      ["famous landmarks", "Kalemegdan Fortress, St. Sava Temple"]
+    ]
+  },
+  {
+    "city": "Paris",
+    "description": "capital of France",
+    "questions": [
+      ["why Paris", "it's known for its art, fashion, and culture"],
+      ["what can I do in Paris", "visit the Eiffel Tower, Louvre Museum"],
+      ["best time to visit", "April to June and October to early November"],
+      ["famous landmarks", "Eiffel Tower, Notre-Dame Cathedral"]
+    ]
+  },
+  {
+    "city": "Tokyo",
+    "description": "capital of Japan",
+    "questions": [
+      ["why Tokyo", "it's a vibrant mix of tradition and technology"],
+      ["what can I do in Tokyo", "explore temples, try unique foods"],
+      ["best time to visit", "March to May and September to November"],
+      ["famous landmarks", "Tokyo Tower, Senso-ji Temple"]
+    ]
+  },
+  {
+    "city": "Cairo",
+    "description": "capital of Egypt",
+    "questions": [
+      ["why Cairo", "it has ancient historical landmarks"],
+      ["what can I do in Cairo", "visit the Pyramids, Nile River"],
+      ["best time to visit", "October to April for cooler weather"],
+      ["famous landmarks", "Great Pyramids, Sphinx"]
+    ]
+  },
+  {
+    "city": "New York",
+    "description": "largest city in the USA",
+    "questions": [
+      ["why New York", "it's known for its skyscrapers and diversity"],
+      ["what can I do in New York", "see the Statue of Liberty, Central Park"],
+      ["best time to visit", "April to June, September to early November"],
+      ["famous landmarks", "Statue of Liberty, Empire State Building"]
+    ]
+  }
+]
+

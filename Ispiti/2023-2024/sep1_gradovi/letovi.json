@@ -1,0 +1,51 @@
+[
+	{
+		"from": "Serbia",
+		"to": "Croatia",
+		"direct": "yes",
+		"duration": 1,
+		"freeSpace": 23,
+		"price": 200,
+		"date" : "22.10.2024."
+	},
+
+	{
+		"from": "Serbia",
+		"to": "France",
+		"direct": "no",
+		"duration": 2,
+		"freeSpace": 12,
+		"price": 230,
+		"date" : "22.10.2024."
+	},
+	
+	{
+		"from": "Croatia",
+		"to": "France",
+		"direct": "yes",
+		"duration": 2,
+		"freeSpace": 10,
+		"price": 245,
+		"date" : "22.10.2024."
+	},
+	
+	{
+		"from": "Serbia",
+		"to": "Germany",
+		"direct": "yes",
+		"duration": 1,
+		"freeSpace": 23,
+		"price": 200,
+		"date" : "22.10.2024."
+	},
+	{
+		"from": "Germany",
+		"to": "France",
+		"direct": "yes",
+		"duration": 2,
+		"freeSpace": 22,
+		"price": 240,
+		"date" : "22.10.2024."
+	}
+	
+]
